@@ -37,8 +37,8 @@
             color: rgba(255, 255, 255, 1);
 
             pointer-events: none;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
             padding: 30px;
             border-radius: 25px;
             border: 5px #000;
@@ -53,7 +53,7 @@
             display: -ms-flexbox;
             display: flex;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            position: relative;
+            position: absolute;
         }
         .card:after {
             content: " ";
@@ -90,8 +90,8 @@
             font-style: italic;
         }
         .card a {
-            -webkit-transform: translateZ(80px);
-            transform: translateZ(80px);
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
             color: #69c6b8;
             pointer-events: auto;
             padding: 10px 15px;
@@ -173,7 +173,7 @@
         }
         .container {
             text-align:center;
-            background-color: rgba(255, 255, 255, .5);
+            background-color: rgba(255, 255, 255, .2);
             pointer-events: none;
             -webkit-transform: translateZ(30px);
             transform: translateZ(30px);
@@ -181,8 +181,8 @@
             padding-left:10px;
             padding-bottom:20px;
 
-            width: 1000px;
-            height: 100px;
+            width: 400px;
+            height: 200px;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
             -webkit-backface-visibility: hidden;
@@ -211,7 +211,7 @@
 </head>
 
 <body>
-<div class="container"></div>
+<div class="container">
  <div class="card">
         <div class=" card-content">
             <h1>MetaMedia</h1><h2>UI / UX Architects</h2>
@@ -219,7 +219,7 @@
             <!--<p class="related">|  <a href="./ab/">3D</a>  |  <a href="./mm/">VR</a>  |  <a href="./ph/">2D</a>  |  <a href="./bz/">App</a>  |  <a href="./port">Design</a>  |</p>-->
         </div>
     </div>
-    <!--that's all folks-->
+</div>    <!--that's all folks-->
     <script>
         var card = $(".card");
         var container = $(".container");
