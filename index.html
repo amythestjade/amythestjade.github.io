@@ -257,7 +257,7 @@
    </div>
 --                         -->
 
-<div id="container" class="container2">
+<div id="container2" class="container2">
     <div class="card">
         <div class=" card-content">
             <h1>MetaMedia</h1><h2>UI / UX Architects</h2>
@@ -269,25 +269,15 @@
 <!--that's all folks-->
 <script>
     var card = $(".card");
-    var container = $(".container2");
+    var container2 = $(".container2");
     $(document).on("mousemove",function(e) {
         var ax = -($(window).innerWidth()/2- e.pageX)/20;
         var ay = ($(window).innerHeight()/2- e.pageY)/10;
         card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
-        container.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+        container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
     });
 </script>
 
-<!--
-<div id="quote1">
-    <div id="quote"> <i class="fa fa-quote-left">&nbsp&nbsp</i><span id='text'><p>test this is a test to see what happens with a lot of text</p></span> </div>
-    <div id="author"> Author author </div>
-
-    <div id="right-buttons-hover" class="highlight"> New Quote </div>
-    <div id="right-buttons" class="standard"> New Quote </div>
-
-</div>
--->
 <!--  only scripts below this line!!    -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
 <script src="three.js"></script>
@@ -299,90 +289,7 @@
 <script src="OrbitControls.js"></script>
 <script src="Mirror.js"></script>
 <script src="WaterShader.js"></script>
-<!--
-    <script>
-        /*This isn't the final, this is just a fork with a few bugs */
 
-        $(document).ready(function() {
-            var $hue = Math.floor((Math.random() * 360) + 1);
-
-            $("#right-buttons-hover").hide()
-
-            /*this will hold quote dictionaries*/
-
-            var quoteBank = [];
-            $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=30&callback=", function(data) {
-
-                data.forEach(function(val) {
-                    quoteBank.push(val);
-                })
-                changeQuote();
-            });
-
-            /*changes the theme of the website */
-            function changeColor() {
-                $hue = Math.floor((Math.random() * 360) + 1);
-                $("body, .standard").animate({
-                    "background-color": "hsl(" + $hue + ", 68%, 67%)",
-                    queue: false
-                }, 1500);
-                $(".standard-text").animate({
-                    "color": "hsl(" + $hue + ", 68%, 67%)",
-                    queue: false
-                }, 1500);
-                /* This didn't work the way I wanted it to but I like how it checks for hover and wanted to keep the code for reference
-
-                if ($('#right-buttons:hover').length != 0) {
-                  $('#right-buttons').animate({"background-color":  "hsl("+$hue+", 68%, 55%)"}, 1500);*/
-                $(".highlight").animate({
-                    "background-color": "hsl(" + $hue + ", 68%, 55%)",
-                    queue: false
-                }, 1500);
-            }
-
-            function changeQuote() {
-                var randomQuote = Math.floor((Math.random() * 29))
-                $("#text").html(quoteBank[randomQuote].content);
-                $("#author").html(quoteBank[randomQuote].title);
-            }
-
-
-            $("#left-buttons").hover(function() {
-                $(this).css({
-                    "background-color": "hsl(" + $hue + ", 68%, 55%)"
-                })
-            }, function() {
-                $(this).css({
-                    "background-color": "hsl(" + $hue + ", 68%, 67%)"
-                })
-            });
-
-            changeColor();
-            console.log(quoteBank.length)
-                /*this changeQuote() call breaks all jQuery below it and does not execture if placed at the very bottom of the jQuery inside of the document ready function*/
-                /*
-                changeQuote(); */
-
-            //I'm making this a little messy because the changeColor function was not working well with a simple .css change for #right-buttons.  The highlighted or standard color would "freeze" during the animation and I would need to move the mouse back over the button to corret the coloration.  I want the highlight color to be darker, so I could not simply change the opacity.
-            $("#right-buttons, #right-buttons-hover").hover(
-                function() {
-                    $("#right-buttons").hide()
-                    $("#right-buttons-hover").show()
-                },
-                function() {
-                    $("#right-buttons").show()
-                    $("#right-buttons-hover").hide()
-                });
-
-            $("#right-buttons-hover").on('click', function() {
-                changeQuote();
-                changeColor();
-
-            });
-
-        });
-    </script>
--->
 
 <script>
     if (!Detector.webgl) {
