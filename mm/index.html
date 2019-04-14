@@ -7,9 +7,11 @@
     <meta name="description" content="Messages?">
     <meta name="author" content="This message is.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        // A fortune cookie app
-    </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
+
 
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Flamenco" rel="stylesheet">
 
@@ -28,25 +30,6 @@
             font-family: "Playfair Display", georgia, serif;
         }
         
-        #quote1 {
-            position: absolute;
-            border-radius: 15px;
-            text-align: center;
-            top: 35%;
-            left: 20%;
-            right: 20%;
-            background-color: rgba(0, 0, 55, .5);
-            background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
-            background-size: 3px, 13px, 17px, 5px;
-            background-repeat: no-repeat;
-
-            z-index: 0;
-            overflow: auto;
-            color: white;
-            font-size: 18pt;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        }
-        
         a,
         a:visited,
         a:active,
@@ -59,82 +42,7 @@
             display: inline;
         }
         
-        #quote-box {
-            width: 25%;
-            background-color: white;
-            margin-right: auto;
-            margin-left: auto;
-            text-align: center;
-            padding: 50px 50px 70px 50px;
-            border-radius: 15px;
-            align: center;
-        }
-        
-        #quote {
-            padding-bottom: 5px;
-            padding-top: 5px;
-            font-family: 'Raleway', sans-serif;
-            font-size: 1em;
-        }
-        
-        #author {
-            font-size: .5em;
-            padding: 5px;
-            right: 2%;
-        }
-        
-        #right-buttons,
-        #right-buttons-hover,
-        #left-buttons {
-            line-height: 25px;
-            height: 25px;
-            display: inline-block;
-            position: relative;
-            float: center;
-            border-radius: 3px;
-            color: white;
-        }
-        
-        #right-buttons:hover,
-        #left-buttons:hover,
-        #right-buttons-hover:hover {
-            cursor: pointer;
-        }
-        
-        #right-buttons,
-        #right-buttons-hover {}
-        
-        #left-buttons {
-            float: left;
-            font-size: 1.5em;
-        }
-        
-        .standard {
-            background-color: hsl(20, 68%, 67%);
-        }
-        
-        .standard-text {
-            color: hsl(120, 68%, 67%);
-        }
-        
-        .highlight {
-            background-color: hsl(20, 68%, 67%);
-        }
-        
-        @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
-        .footerg {
-            position: absolute;
-            right: 0;
-            top: 0;
-            left: 0;
-            padding: 1px;
-            width: 100%;
-            background-color: rgba(0, 0, 0, .25);
-            color: rgba(255, 255, 255, 1);
-            text-align: center;
-            font-style: italic;
-        }
-        
+
         .footerg a {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
@@ -174,11 +82,272 @@
             border: solid 1px #203E5F;
         }
     </style>
+    <!-- preload CSS -->
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
+        @import url('https://fonts.googleapis.com/css?family=Overpass');
+
+        body {
+            background-color: rgba(55, 55, 55, .5);
+
+            overflow:hidden;
+
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 100vh;
+            font-family: "Playfair Display",georgia,serif;
+        }
+
+        .card {
+
+            color: rgba(255, 255, 255, 1);
+
+            background-color: rgba(0, 0, 100, 0.5);
+            pointer-events: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            padding: 30px;
+            border-radius: 25px;
+            border: 5px #000;
+            width: 400px;
+            height: 200px;
+            margin: auto;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .card:after {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            border-radius: 50%;
+            left: 0;
+            bottom: -50px;
+            box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+        }
+        .card .card-content {
+            margin: auto;
+            text-align: center;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .card h1 {
+            -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+        }
+        .card h2 {
+            -webkit-transform: translateZ(75px);
+            transform: translateZ(75px);
+        }
+        .card p {
+            -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+            display: block;
+        }
+        .card p.related {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            font-style: italic;
+        }
+        .card a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #69c6b8;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .card a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .card a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+        .card2 a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #69c6b8;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .card2 a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .card2 a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+        .footer a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #69c6b8;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .footer a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .footer a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+
+
+        .blur {
+            padding-bottom:10px;
+
+            color: rgba(0, 0, 100, 0.5);
+            font-size: 5em;
+            text-align: center;
+
+        }
+        .container {
+            text-align:center;
+            background-color: rgba(255, 255, 255, .5);
+            pointer-events: none;
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+            border-radius: 25px 0px 0px 25px;
+            padding-left:10px;
+            padding-bottom:20px;
+
+            width: 1000px;
+            height: 100px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: absolute;
+            top:10%;
+            left:50%;
+        }
+
+        .footer {
+            position: absolute;
+            display: none;
+            right: 0;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            width: 100%;
+            background-color: #efefef;
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <div id="container"></div>
+
+    <!--rpwalsh entry portal-->
+
+    <!--   top bar + 3D blur   --
+
+       <div class="container">
+       <div  class="blur" >rpwalsh.tk</div>
+       </div>
+    --                         -->
+
+
+    <div class="card">
+        <div class=" card-content">
+            <h1>MetaMedia</h1><h2>UI / UX Architects</h2>
+            <p><small>Production Code & Commercial Design</small></p>
+            <!--<p class="related">|  <a href="./ab/">3D</a>  |  <a href="./mm/">VR</a>  |  <a href="./ph/">2D</a>  |  <a href="./bz/">App</a>  |  <a href="./port">Design</a>  |</p>-->
+        </div>
+    </div>
+    <!--that's all folks-->
+    <script>
+        var card = $(".card");
+        var container = $(".container");
+        $(document).on("mousemove",function(e) {
+            var ax = -($(window).innerWidth()/2- e.pageX)/20;
+            var ay = ($(window).innerHeight()/2- e.pageY)/10;
+            card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+            container.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+        });
+    </script>
+
     <!--
     <div id="quote1">
         <div id="quote"> <i class="fa fa-quote-left">&nbsp&nbsp</i><span id='text'><p>test this is a test to see what happens with a lot of text</p></span> </div>
@@ -186,8 +355,9 @@
 
         <div id="right-buttons-hover" class="highlight"> New Quote </div>
         <div id="right-buttons" class="standard"> New Quote </div>
--->
+
     </div>
+    -->
     <!--  only scripts below this line!!    -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="three.js"></script>
@@ -364,7 +534,7 @@
                     function resizeCanvas() {
                         $(document).width = window.innerWidth;
                         $(document).height = window.innerHeight;
-                    };
+                    }
                     window.addEventListener('resize', resizeCanvas, false);
                     window.addEventListener('resize', onWindowResize, false);
 
