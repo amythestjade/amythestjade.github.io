@@ -11,29 +11,38 @@
 </head>
 
 <body>
-
     <div class="card">
         <div class="card-content">
-            <h3><a href="#">UX Designer: Jack Walsh</a></h3>
-            <h2>An Interactive Portfolio</h2>
             <h1>M e t a M e d i a  :  2 0 2 0</h1>
-            <h2>Of Commercial Development</h2>
-            <h3><a href="#">UI Architect: Ryan Walsh</a></h3>
-
+            <h3>An Interactive Portfolio Of Commercial Development</h3>
+            <h1><a href="#">UI Architect: Ryan Walsh</a></h1>
+            <h1><a href="#">UX Designer: Jack Walsh</a></h1>
+            <h3>(c)2019 All Rights Reserved</h3>
         </div>
     </div>
-    <div class="footer">| <a href="./ab/">3D</a> | <a href="./mm/">VR</a> | <a href="./ph/">2D</a> | <a href="https://play.google.com/store/apps/developer?id=Castlehale+Group+Ltd" target="_blank">App</a> | <a href="./port">Design</a> |</div>
+    <div class="footer">
+        <div class="footer-content"><h2>
+        <a href="./ab/">Entertainment</a>
+        <a href="./ph/">Marketing</a>
+        <a href="#">Corporate</a>
+        <a href="./ph/">Mobile Apps</a>
+        <a href="./port">Industrial Design</a>
+        <a href="#">Code Browser</a>
+<!--    <a href="https://play.google.com/store/apps/developer?id=Castlehale+Group+Ltd" target="_blank">App</a> -->
+    </h2></div>
+    </div>
+
 
 
 <!--that's all folks-->
 <script>
     var card = $(".card");
-    var container2 = $(".container2");
+    //var container2 = $(".footer");
     $(document).on("mousemove",function(e) {
-        var ax = -($(window).innerWidth()/2- e.pageX)/20;
-        var ay = ($(window).innerHeight()/2- e.pageY)/10;
+        var ax = -($(window).innerWidth()/2- e.pageX)/25;
+        var ay = ($(window).innerHeight()/2- e.pageY)/25;
         card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
-        container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+    //    container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
     });
 </script>
 
