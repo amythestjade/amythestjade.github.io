@@ -154,8 +154,12 @@
             border: solid 1px #203E5F;
         }
         .footer {
-            bottom: 0;
-
+            backface-visibility: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            position: relative;
             padding: 10px;
             width: 100%;
             background-color: #efefef;
