@@ -7,7 +7,7 @@
             overflow: hidden;
             font-weight: bold;
             color: white;
-            font-family: 'Maven Pro', sans-serif;
+            font-family: 'Philosopher', sans-serif;
             vertical-align: middle;
         }
 
@@ -58,54 +58,50 @@
             box-shadow: 0 30px 20px rgba(0, 0, 0, 0.6);
         }
         .card .card-content {
-            margin: auto;
             width:400px;
             text-align: center;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-            display: block;
+            display:  block;
 
         }
         .card h1 {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
             display: block;
-
         }
         .card h2 {
-            -webkit-transform: translateZ(80px);
-            transform: translateZ(80px);
+            -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
             display: block;
 
         }
         .card h3 {
-            -webkit-transform: translateZ(80px);
-            transform: translateZ(80px);
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
             display: block;
 
         }
         .card p {
-            -webkit-transform: translateZ(80px);
-            transform: translateZ(80px);
+            -webkit-transform: translateZ(10px);
+            transform: translateZ(10px);
             display: block;
         }
 
         .card a {
-            -webkit-transform: translateZ(80px);
-            transform: translateZ(80px);
-            color: #69c6b8;
+            -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+            color: #ffffff;
             pointer-events: auto;
+            background-color: rgba(0, 0, 100, 0.0);
+            margin: 10px 15px;
             padding: 10px 15px;
-            background: #4479BA;
-
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
-            border: solid 1px #20538D;
+            border: solid 0px #20538D;
             text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+
             -webkit-transition-duration: 0.2s;
             -moz-transition-duration: 0.2s;
             transition-duration: 0.2s;
@@ -116,13 +112,11 @@
         }
         .card a:hover {
             background: #356094;
-            border: solid 1px #2A4E77;
             text-decoration: none;
+            text-shadow: 0 -1px 0 rgba(0, 0, 100, 0.5);
+
         }
         .card a:active {
-            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
             background: #2E5481;
             border: solid 1px #203E5F;
         }
