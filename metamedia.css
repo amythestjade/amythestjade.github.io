@@ -1,0 +1,237 @@
+
+        body {
+            background-color: rgba(0, 0, 55, .5);
+            background-size: 3px, 13px, 17px, 5px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-weight: bold;
+            color: white;
+
+            vertical-align: middle;
+            font-family: "Playfair Display", georgia, serif;
+        }
+
+        a,
+        a:visited,
+        a:active,
+        a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        p {
+            display: inline;
+        }
+
+        .card {
+
+            color: rgba(255, 255, 255, 1);
+
+            background-color: rgba(0, 100, 100, 0.5);
+            pointer-events: none;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            padding: 30px;
+            border-radius: 25px;
+            border: 5px #000;
+            width: 450px;
+            height: 225px;
+            margin: auto;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .card:after {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            border-radius: 50%;
+            left: 0;
+            bottom: -50px;
+            box-shadow: 0 30px 20px rgba(0, 0, 0, 0.6);
+        }
+        .card .card-content {
+            margin: auto;
+            text-align: center;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .card h1 {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+        }
+        .card h2 {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+        }
+        .card p {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            display: block;
+        }
+        .card p.related {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            font-style: italic;
+        }
+        .card a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #69c6b8;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .card a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .card a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+        .card2 a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #69c6b8;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .card2 a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .card2 a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+        .footer a {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            color: #fff;
+            pointer-events: auto;
+            padding: 10px 15px;
+            background: #4479BA;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #20538D;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+            -webkit-transition-duration: 0.2s;
+            -moz-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .footer a:hover {
+            background: #356094;
+            border: solid 1px #2A4E77;
+            text-decoration: none;
+        }
+        .footer a:active {
+            -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            background: #2E5481;
+            border: solid 1px #203E5F;
+        }
+
+
+        .blur {
+            padding-bottom:10px;
+
+            color: rgba(0, 0, 100, 0.5);
+            font-size: 5em;
+            text-align: center;
+
+        }
+        .container2 {
+            text-align:center;
+            background-color: rgba(255, 255, 255, 0);
+            pointer-events: none;
+            -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+            border-radius: 25px 0px 0px 25px;
+            padding-left:10px;
+            padding-bottom:20px;
+
+            width: 1000px;
+            height: 100px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: absolute;
+            top:10%;
+
+        }
+
+        .footer {
+            position: absolute;
+            display: none;
+            right: 0;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            width: 100%;
+            background-color: #efefef;
+            text-align: center;
+        }
+
+    
