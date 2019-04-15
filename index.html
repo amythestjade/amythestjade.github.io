@@ -7,12 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
     <link rel="stylesheet" href="./metamedia.css" />
-    <script>var sunbox = "./3.png"
-    var cardcanvas    = document.getElementById('container');
-
-
-
-    </script>
+    <script>var sunbox = "./3.png";</script>
 </head>
 
 <body>
@@ -97,8 +92,8 @@
         camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.5, 3000000);
         camera.position.set(2000, 750, 2000);
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls1 = new THREE.DeviceOrientationControls(camera, renderer.domElement);
-        controls2 = new THREE.VRControls(camera, renderer.domElement);
+        //controls = new THREE.DeviceOrientationControls(camera, renderer.domElement);
+        //controls = new THREE.VRControls(camera, renderer.domElement);
 
         controls.enablePan = false;
         controls.minDistance = 1000.0;
