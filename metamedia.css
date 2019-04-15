@@ -60,6 +60,7 @@
         }
         .card .card-content {
             margin: auto;
+            width:400px;
             text-align: justify;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
