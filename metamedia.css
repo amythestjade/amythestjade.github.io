@@ -7,9 +7,8 @@
             overflow: hidden;
             font-weight: bold;
             color: white;
-
+            font-family: 'Maven Pro', sans-serif;
             vertical-align: middle;
-            font-family: "Playfair Display", georgia, serif;
         }
 
         a,
@@ -45,8 +44,8 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            position: relative;
+            top: 15%;left:15%;
+            position: absolute;
         }
         .card:after {
             content: " ";
@@ -64,25 +63,33 @@
             text-align: center;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+            display: block;
+
         }
         .card h1 {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
+            display: block;
+
         }
         .card h2 {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
+            display: block;
+
+        }
+        .card h3 {
+            -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+            display: block;
+
         }
         .card p {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
             display: block;
         }
-        .card p.related {
-            -webkit-transform: translateZ(0px);
-            transform: translateZ(0px);
-            font-style: italic;
-        }
+
         .card a {
             -webkit-transform: translateZ(80px);
             transform: translateZ(80px);
@@ -170,9 +177,13 @@
 
             text-align: center;
         }
+
         .footer a {
 
             color: #fff;
+            -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+            font-style: italic;
 
             padding: 10px 15px;
             background: #4479BA;
@@ -207,29 +218,7 @@
             text-align: center;
 
         }
-        .container2 {
-            text-align:center;
-            background-color: rgba(255, 255, 255, 0);
-            pointer-events: none;
-            -webkit-transform: translateZ(30px);
-            transform: translateZ(30px);
-            border-radius: 25px 0px 0px 25px;
-            padding-left:10px;
-            padding-bottom:20px;
 
-            width: 1000px;
-            height: 100px;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            position: absolute;
-            top:10%;
-
-        }
 
 
 
