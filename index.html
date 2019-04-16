@@ -5,42 +5,37 @@
 <head>
     <title>: [ O ] :</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
     <link rel="stylesheet" href="./metamedia.css" />
-    <link rel="stylesheet" href="./ab/css/styles.css">
 
     <script>var sunbox = "./skyboxsun5deg2.png";</script>
 </head>
 
 <body>
-    <div id="container" width="95%" height="15%">
 
-        <button id='topButton' value="r" onClick="Aclicker()" style="display: none;"></button>
-        <button id="hideButton" value="y" onClick="shifty()" style="display: none;">X</button>
-        <input type="button" id='mainButton' value="" />
+        <button id='topButton' value="r" onClick="Aclicker()" style="visibility: hidden" />
+        <button id="hideButton" value="y" onClick="shifty()" style="visibility: hidden">X</button>
+        <input type="button" id='mainButton' value="" style="visibility: hidden" />
 
 
-        <canvas id="bigCanvas"></canvas>
-        <div id="showtags" style="display:none;"> </div>
-        <div id="chariCard" class="card-container" width="100%" height="100%"> </div>
-        <div id="shimBtm"></div>
+        <canvas id="bigCanvas" style="visibility: hidden"></canvas>
+        <div id="showtags" style="visibility: hidden"> </div>
+        <div id="chariCard" class="card-container" style="visibility: hidden"> </div>
+        <div id="shimBtm" style="visibility: hidden"></div>
 
-        <input type="search" id='shim' placeholder="#search" /></input>
-        <input type='submit' value="?" id='searchButton'></input>
-        <input type='submit' value="?" id='searchButton2'></input>
-        <div id="searches"> </div>
+        <input type="search" id='shim' style="visibility: hidden" placeholder="#search" />
+        <input type='submit' value="?" style="visibility: hidden" id='searchButton' />
+        <input type='submit' value="?" style="visibility: hidden" id='searchButton2' />
+        <div id="searches" style="visibility: hidden"> </div>
 
-    </div>
 
     <div class="card">
         <div class="card-content">
-            <h1>M e t a M e d i a  :  2 0 2 0</h1>
+            <h1>M e t a M e d i a</h1>
             <h3>An Interactive Portfolio Of Commercial Development</h3>
             <h1><a href="#">UI Architect: Ryan Walsh</a></h1>
             <h1><a href="#">UX Designer: Jack Walsh</a></h1>
-            <h3>(c)2019 All Rights Reserved</h3>
+            <h3 style="background-color: rgba(255, 255, 255, 0.0);">(c)2019 All Rights Reserved</h3>
         </div>
     </div>
 

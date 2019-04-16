@@ -143,10 +143,10 @@ $(document).keyup(function(e) {
 
 
 if ("ontouchstart" in document.documentElement){
-touchOpt = {dragControl: true, shape: 'sphere', textFont: 'Open Sans', imagePadding: 2,textColour: '#ccc', outlineColour: '#0f0', clickToFront:   500, reverse: true, depth: 1, maxSpeed: 0.03,  initial: [0.02,-0.02], zoom: 1, imageRadius: 5, imagePosition: "bottom",  imageMode: "both",  outlineMethod: 'colour', bgOutlineThickness: 2, bgColour: '#111',  bgRadius: 5,  outlineRadius: 5,  fadeIn: 2000,decel: .90,  pinchZoom: true, imageVAlign: "top", centreImage: bg21};
+touchOpt = {dragControl: true, shape: 'sphere', textFont: 'Open Sans', imagePadding: 2,textColour: '#ccc', outlineColour: '#0f0', clickToFront:   500, reverse: true, depth: 1, maxSpeed: 0.03,  initial: [0.02,-0.02], zoom: 1, imageRadius: 5, imagePosition: "bottom",  imageMode: "both",  outlineMethod: 'colour', bgOutlineThickness: 2, bgColour: '#111',  bgRadius: 5,  outlineRadius: 5,  fadeIn: 2000,decel: .90,  pinchZoom: true, imageVAlign: "top", centreImage: './img/logo.png'};
 tagOpt = touchOpt; 
 }else{
-mouseOpt = {dragControl: false, shape: 'sphere', textFont: 'Open Sans', imagePadding: 2,textColour: '#ccc', outlineColour: '#0f0', clickToFront:   500, reverse: true, depth: 1, maxSpeed: 0.03,  initial: [0.02,-0.02], zoom: 1, imageRadius: 5, imagePosition: "bottom",  imageMode: "both",  outlineMethod: 'colour', bgOutlineThickness: 2, bgColour: '#111',  bgRadius: 5,  outlineRadius: 5,  fadeIn: 2000,decel: .99,  pinchZoom: true, imageVAlign: "top", centreImage: bg21}
+mouseOpt = {dragControl: false, shape: 'sphere', textFont: 'Open Sans', imagePadding: 2,textColour: '#ccc', outlineColour: '#0f0', clickToFront:   500, reverse: true, depth: 1, maxSpeed: 0.03,  initial: [0.02,-0.02], zoom: 1, imageRadius: 5, imagePosition: "bottom",  imageMode: "both",  outlineMethod: 'colour', bgOutlineThickness: 2, bgColour: '#111',  bgRadius: 5,  outlineRadius: 5,  fadeIn: 2000,decel: .99,  pinchZoom: true, imageVAlign: "top", centreImage: './img/logo.png'}
 tagOpt = mouseOpt;console.log(location.hash);
 }
 
