@@ -30,11 +30,8 @@ var boxHider      = document.getElementById('boxHider');
 var suggest;
 var search = [];
 var search2 = [];
-
-
 var query = '';
-var char2Tag = []; 
-
+var char2Tag = [];
 var paragraph = [];
 
   var paragraph2 = [];
@@ -361,7 +358,7 @@ paragraph2 = [];
 paragraph.push('<a href="'+valthumb+'" class="fresco" data-fresco-group="shared_options"><img width="25%" src="'+valthumb+'" style="margin-right: 2%;"/></a>');
   $.getJSON( char, function(data1) {
       $.each(data1.sections, function(key, val) {
-          paragraph.push('<div align="left" style="margin:5px;padding:1 0 1 1;background-color:#040;border-color:#f00;border:4;border-radius:15px;"><p><h2>'+val.title+'</h2></p></div>');
+          paragraph.push('<div style="margin:5px;padding:1 0 1 1;background-color:#040;border-color:#f00;border:4;border-radius:15px;"><p><h2>'+val.title+'</h2></p></div>');
         $.each(val.images, function(key1, val1) {
            
                   var url = val1.src;
