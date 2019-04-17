@@ -3,10 +3,12 @@
 <html lang="en">
 
 <head>
-    <title>: [ O ] :</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <title>: >-[ O ]-> :</title>
 
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="three.js"></script>
 
+    <script src="./js/jquery.tagcanvas.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
     <link rel="stylesheet" href="./metamedia.css" />
     <link rel="stylesheet" href="./ab/css/styles.css">
@@ -15,17 +17,17 @@
 </head>
 
 <body>
-<div id="container" width="95%" height="15%">
+<div id="container" style="visibility: hidden;">
 
     <button id='topButton' value="r" onClick="Aclicker()" style="visibility: hidden;"></button>
     <button id="hideButton" value="y" onClick="shifty()" style="visibility: hidden;">X</button>
     <input type="button" id='mainButton' value="Loading Experience..." />
 
 
-    <canvas id="bigCanvas" style="visibility: hidden;"></canvas>
-    <div id="showtags" style="display:none;" style="visibility: hidden;"> </div>
-    <div id="chariCard" class="card-container" width="100%" height="100%" style="visibility: hidden;"> </div>
-    <div id="shimBtm"style="visibility: hidden;" style="visibility: hidden;"></div>
+    <canvas id="bigCanvas"></canvas>
+    <div id="showtags" style="visibility: hidden;"> </div>
+    <div id="chariCard" class="card-container" style="visibility: hidden;"> </div>
+    <div id="shimBtm" style="visibility: hidden;"></div>
 
     <input type="search" id='shim' placeholder="#search" style="visibility: hidden;" />
     <input type='submit' value="?" id='searchButton' style="visibility: hidden;" />
@@ -71,16 +73,7 @@
 </script>
 
 <!--  only scripts below this line!!    -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-<script src="three.js"></script>
 
-<script src="Detector.js"></script>
-<script src="DeviceOrientationControls.js"></script>
-<script src="VRControls.js"></script>
-
-<script src="OrbitControls.js"></script>
-<script src="Mirror.js"></script>
-<script src="WaterShader.js"></script>
 
 
 <script>
@@ -236,12 +229,17 @@
 
     }
 </script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
-<script src="./js/jquery.tagcanvas.min.js" type="text/javascript"></script>
+<script src="DeviceOrientationControls.js"></script>
+<script src="VRControls.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="Mirror.js"></script>
+<script src="WaterShader.js"></script>
+
 <script src="./js/Detector.js" type="text/javascript"></script>
-<script src="./js/hs.js" type="text/javascript"></script>
 <script src="./js/fresco.js" type="text/javascript"></script>
 <script src="./ab/js/prot4usA.js"></script>
+
+
 </body>
 
 </html>
