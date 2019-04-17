@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
     <link rel="stylesheet" href="./metamedia.css" />
     <link rel="stylesheet" href="./ab/css/styles.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="./js/jquery.tagcanvas.min.js" type="text/javascript"></script>
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="Mirror.js"></script>
+    <script src="WaterShader.js"></script>
 
     <script>var sunbox = "./skyboxsun5deg2.png";</script>
 </head>
-
 <body>
     <div id="container" width="95%" height="15%">
 
@@ -65,22 +71,12 @@
     $(document).on("mousemove",function(e) {
         var ax = -($(window).innerWidth()/2- e.pageX)/25;
         var ay = ($(window).innerHeight()/2- e.pageY)/25;
-        card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+       card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
     //    container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
-    });
+   });
 </script>
 
 <!--  only scripts below this line!!    -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-<script src="three.js"></script>
-
-<script src="Detector.js"></script>
-<script src="DeviceOrientationControls.js"></script>
-<script src="VRControls.js"></script>
-
-<script src="OrbitControls.js"></script>
-<script src="Mirror.js"></script>
-<script src="WaterShader.js"></script>
 
 
 <script>
@@ -236,8 +232,7 @@
 
     }
 </script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
-    <script src="./js/jquery.tagcanvas.min.js" type="text/javascript"></script>
+
     <script src="./js/Detector.js" type="text/javascript"></script>
     <script src="./js/hs.js" type="text/javascript"></script>
     <script src="./js/fresco.js" type="text/javascript"></script>
