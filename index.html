@@ -101,15 +101,15 @@
 <!--                   Scene 0 ......  ICONS  ...... 3D VR WebSpace                          -->
 <!-- --------------------------------------------------------------------------------------- -->
 <div style="position:fixed; top:10px; left:10px; z-index:9999999999999999;">
-    <a href="#" onClick="$('#bigcanvasContainer').toggle();"><i class="fas fa-home fa-3x"></i></a>
+    <a href="https://MetaMedia.Me"><i class="fas fa-home fa-3x"></i></a>
 
 </div>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-
-<div id='thisCard' class="card">
-    <div class="card-content">
+<span id="cardspan">
+    <div id='thisCard' class="card">
+    <div id="cardContent" class="card-content">
         <h1>M e t a M e d i a  :  2 0 2 0</h1>
         <h3>An Interactive Portfolio Of Commercial Development</h3>
         <h1><a href="#">UI Architect: Ryan Walsh</a></h1>
@@ -117,11 +117,13 @@
         <h3>(c)2019 All Rights Reserved</h3>
     </div>
 </div>
+</span>
+
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 2 ...... Footer Menu                            -->
 <!-- --------------------------------------------------------------------------------------- -->
 
-<div class="footer">
+<div id="footer" class="footer">
     <div class="footer-content">
         <a id="entButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
         <a href="#"><h2>Small Business</h2></a>

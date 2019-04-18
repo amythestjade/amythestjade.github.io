@@ -32,6 +32,14 @@
         p {
             display: inline;
         }
+
+        .hiddenstuff{
+            z-index: -9999999999999999;
+            position: absolute;
+            left: -9999999999999px;
+            bottom: -9999999999999999px;
+            display: none;
+        }
 .curtain{
 
     background-color: rgba(0, 0, 5, .81);

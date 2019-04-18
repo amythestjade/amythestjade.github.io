@@ -145,14 +145,22 @@ function Dclicker() {
 }
 
 function clicker() {
-   var thisCard1 = $('#thisCard');
 
     //thisCard1.fadeOut();
 
-    $('#curtain1').slideUp(600);
+    $('#curtain1').fadeIn(600);
     //$('#curtain1').style('z-index','0');
-    thisCard1.remove();
+    //var tc = 'card';
+    //var hdn = 'hiddenstuff';
+    //var ccc = 'card-content'
+    //thisCard1.toggleClass(tc, hdn);
+    //thisCard2.toggleClass(ccc, hdn);
 
+    //thisCard1.hide();
+
+
+
+    $('#cardspan').hide();
     $('#bigcanvasContainer').show();
 
   //  $('#bigCanvas').show();
