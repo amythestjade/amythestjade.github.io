@@ -35,7 +35,30 @@
     <!-- --------------------------------------------------------------------------------------- -->
     <!--                                                               local temp script helpers -->
     <script>var sunbox = "./3.png";</script>
-
+<script>function toggleFullScreen(elem) {
+    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+        if (elem.requestFullScreen) {
+            elem.requestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}</script>
 </head>
 <body>
 <!-- --------------------------------------------------------------------------------------- -->
@@ -100,9 +123,9 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  ICONS  ...... 3D VR WebSpace                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-<span style="position:fixed; top:10px; left:10px; z-index:9999999999999999;">
+<span id='menuSpan' style="position:fixed; top:25px; right:25px; z-index:9999999999999999;">
     <a href="https://MetaMedia.Me"><i class="fas fa-home fa-3x"></i></a>
-
+    <a href="#" onclick="menuHelper();"><i id='fsIcon' class="fas fa-expand-arrows-alt fa-3x"></i></a>
 </span>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->

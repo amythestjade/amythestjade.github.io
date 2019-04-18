@@ -128,7 +128,7 @@ $(document).ready(function () {
 
     $('.loading').fadeOut(2500);
 
-    $('#curtain2').fadeOut(7500);
+    $('#curtain2').fadeOut(3500);
 
     //$(window).hashchange();
     getSearch();
@@ -139,7 +139,12 @@ $(document).ready(function () {
 function Dclicker2() {
     $('#hideButton').click();
 }
+function menuHelper(){
 
+    toggleFullScreen(document.body);
+    $('#fsIcon').toggleClass('fa-expand-arrows-alt fa-compress-arrows-alt');
+
+}
 function Dclicker() {
     $('#shimBtm').hide();
 }
