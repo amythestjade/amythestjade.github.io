@@ -35,7 +35,15 @@
     <!-- --------------------------------------------------------------------------------------- -->
     <!--                                                               local temp script helpers -->
     <script>var sunbox = "./3.png";</script>
-<script>function toggleFullScreen(elem) {
+<script>
+    function menuHelper(){
+
+        toggleFullScreen(document.body);
+        $('#fsIcon').toggleClass('fa-expand-arrows-alt fa-compress-arrows-alt');
+
+    }
+
+    function toggleFullScreen(elem) {
     // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
     if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
         if (elem.requestFullScreen) {
