@@ -140,8 +140,10 @@ function Dclicker() {
 }
 
 function clicker() {
-   $('#thisCard').fadeOut();
-    $('#thisCard').remove();
+   var thisCard1 = $('#thisCard');
+
+    thisCard1.fadeOut();
+    thisCard1.remove();
 
 
     $('#bigCanvas').show();
