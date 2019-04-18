@@ -124,7 +124,9 @@ $("#shim").keyup(function (event) {
 //Fire cascade when ready, Lieutennt!
 $(document).ready(function () {
     $('#bigCanvas').hide();
-    $('#curtain1').fadeOut();
+    $('.loading').fadeOut(2500);
+
+    $('#curtain2').fadeOut(7500);
 
     //$(window).hashchange();
     getSearch();
@@ -143,11 +145,11 @@ function Dclicker() {
 function clicker() {
    var thisCard1 = $('#thisCard');
 
-    thisCard1.fadeOut();
-    thisCard1.remove();
-    $('#curtain1').fadeIn();
-    //$('#curtain1').style('z-index','0');
+    //thisCard1.fadeOut();
 
+    $('#curtain1').slideUp(600);
+    //$('#curtain1').style('z-index','0');
+    thisCard1.remove();
 
 
     $('#bigCanvas').show();
@@ -215,7 +217,7 @@ if ("ontouchstart" in document.documentElement) {
         depth: 1,
         maxSpeed: 0.03,
         initial: [0.02, -0.02],
-        zoom: .5,
+        zoom: 1,
         imageRadius: 5,
         imagePosition: "bottom",
         imageMode: "both",
