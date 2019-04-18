@@ -22,7 +22,9 @@
 
 </head>
 <body>
-    <div id="container" width="95%" height="15%">
+<div id="curtain1" class="curtain"></div>
+
+    <div id="container">
 
         <button id='topButton' value="r" onClick="Aclicker()" style="visibility: hidden;"></button>
         <button id="hideButton" value="y" onClick="shifty()" style="visibility: hidden;">X</button>
@@ -210,6 +212,7 @@
     function animate() {
         requestAnimationFrame(animate);
         render();
+
     }
 
     function render() {
@@ -219,6 +222,7 @@
         controls.update();
         water.render();
         renderer.render(scene, camera);
+
     }
 </script>
 <script>

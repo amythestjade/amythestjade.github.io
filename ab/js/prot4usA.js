@@ -124,6 +124,7 @@ $("#shim").keyup(function (event) {
 //Fire cascade when ready, Lieutennt!
 $(document).ready(function () {
     $('#bigCanvas').hide();
+    $('#curtain1').fadeOut();
 
     //$(window).hashchange();
     getSearch();
@@ -144,6 +145,9 @@ function clicker() {
 
     thisCard1.fadeOut();
     thisCard1.remove();
+    $('#curtain1').fadeIn();
+    //$('#curtain1').style('z-index','0');
+
 
 
     $('#bigCanvas').show();
