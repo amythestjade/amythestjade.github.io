@@ -44,15 +44,9 @@
             border: solid 1px rgba(53, 96, 148, 0);
             width: 500px;
             height: 300px;
-            -webkit-transition-duration: 0.2s;
-            -moz-transition-duration: 0.2s;
             transition-duration: 0.2s;
-            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             top: 5%;left:5%;
             position: absolute;
@@ -132,7 +126,7 @@ text-decoration: none;
             bottom: 25px;
 
             background-color: rgba(0, 0, 0, 0.7);
- z-index: 999999;
+            z-index: 999999;
 
             width: 100%;
             padding:5px;

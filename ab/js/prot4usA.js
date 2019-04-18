@@ -124,6 +124,7 @@ $("#shim").keyup(function (event) {
 //Fire cascade when ready, Lieutennt!
 $(document).ready(function () {
     $('#bigCanvas').hide();
+
     //$(window).hashchange();
     getSearch();
 });
@@ -139,7 +140,10 @@ function Dclicker() {
 }
 
 function clicker() {
-    $('.card').hide();
+   $('#thisCard').fadeOut();
+    $('#thisCard').remove();
+
+
     $('#bigCanvas').show();
 }
 
