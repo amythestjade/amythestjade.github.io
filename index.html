@@ -76,21 +76,22 @@
 <!--                   Scene 1 ......  Entertainment ...... AJAX Visualizer                   -->
 <!-- --------------------------------------------------------------------------------------- -->
 
-<div id="bigcanvasContainer">
-    <button id='topButton' value="r" onClick="Aclicker()" style="visibility: hidden;"></button>
-    <button id="hideButton" value="y" onClick="shifty()" style="visibility: hidden;">X</button>
-    <input type="button" id='mainButton' value="" style="visibility: hidden;" />
+<div id="bigcanvasContainer" style="display:none;">
+    <button id='topButton' value="r" onClick="Aclicker()" ></button>
+    <button id="hideButton" value="y" onClick="shifty()" >X</button>
+    <input type="button" id='mainButton' value=""  />
+    <span id='resetButton' value="p" onClick="Bclicker()" style="visibility:hidden;"></span>
 
 
     <canvas id="bigCanvas"></canvas>
-    <div id="showtags" style="visibility: hidden;"> </div>
-    <div id="chariCard" class="card-container" style="visibility: hidden;"> </div>
-    <div id="shimBtm" style="visibility: hidden"></div>
+    <div id="showtags" > </div>
+    <div id="chariCard" class="card-container" > </div>
+    <div id="shimBtm" ></div>
 
-    <input type="search" id='shim' placeholder="#search" style="visibility: hidden;" />
-    <input type='submit' value="?" id='searchButton' style="visibility: hidden;" />
-    <input type='submit' value="?" id='searchButton2' style="visibility: hidden;" />
-    <div id="searches" style="visibility: hidden;"> </div>
+    <input type="search" id='shim' placeholder="#search" />
+    <input type='submit' value="?" id='searchButton'  />
+    <input type='submit' value="?" id='searchButton2'  />
+    <div id="searches"> </div>
 </div>
 <!-- --------------------------------------------------------------------------------------- -->
 <!-- End Scene 1 -->
@@ -100,7 +101,8 @@
 <!--                   Scene 0 ......  ICONS  ...... 3D VR WebSpace                          -->
 <!-- --------------------------------------------------------------------------------------- -->
 <div style="position:fixed; top:10px; left:10px; z-index:9999999999999999;">
-    <a href="http://metamedia.me" ><i class="fas fa-home fa-3x"></i></a>
+    <a href="#" onClick="$('#bigcanvasContainer').toggle();"><i class="fas fa-home fa-3x"></i></a>
+
 </div>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->
@@ -121,7 +123,7 @@
 
 <div class="footer">
     <div class="footer-content">
-        <a id="resetButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
+        <a id="entButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
         <a href="#"><h2>Small Business</h2></a>
         <a href="#"><h2>Mobile Apps</h2></a>
         <a href="#"><h2>Marketing</h2></a>

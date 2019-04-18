@@ -61,7 +61,7 @@ function shifty() {
     $(searches).hide();
     $(hideButton).hide();
     $(mainButton).hide();
-    $(adBox).fadeIn();
+    //$(adBox).fadeIn();
     $(searchButton2).show();
     $(resetButton).show();
     $(chariCard).hide();
@@ -123,7 +123,9 @@ $("#shim").keyup(function (event) {
 
 //Fire cascade when ready, Lieutennt!
 $(document).ready(function () {
-    $('#bigCanvas').hide();
+   // $('#bigCanvas').hide();
+    $('#bigcanvasContainer').hide();
+
     $('.loading').fadeOut(2500);
 
     $('#curtain2').fadeOut(7500);
@@ -151,8 +153,9 @@ function clicker() {
     //$('#curtain1').style('z-index','0');
     thisCard1.remove();
 
+    $('#bigcanvasContainer').show();
 
-    $('#bigCanvas').show();
+  //  $('#bigCanvas').show();
 }
 
 function Aclicker() {
@@ -160,6 +163,7 @@ function Aclicker() {
 }
 
 function Bclicker() {
+    location.reload();
 }
 
 //escape key -> buttonHide
