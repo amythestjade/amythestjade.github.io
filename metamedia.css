@@ -59,58 +59,56 @@
         .card {
 
             color: rgba(53, 96, 148, 1);
-            background-color: rgba(100, 100, 200, 0.4);
+            background-color: rgba(100, 100, 200, 0.0);
 
-            padding: 10px 10px 10px 10px;
-            margin: 10px 10px 10px 10px;
             border-radius: 15px 15px 15px 15px;
             border: solid 1px rgba(53, 96, 148, 0);
-            width: 500px;
-            height: 300px;
+
             transition-duration: 0.2s;
             transform-style: preserve-3d;
             backface-visibility: hidden;
             display: flex;
-            top: 5%;left:5%;
+            flex-direction: row;
+            top: 5px;
             position: absolute;
             z-index: 9999999999999;
         }
 
-        .card .card-content {
+        .card .card-content .cardcredits {
 
-            width:500px;
-            height:300px;
+
             text-align: center;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-            display:  block;
+            display:  flex;
 
         }
-        .card h1 {
+        .cardcredits h1 {
             color: rgba(255, 255, 255, 1);
-
+font-size: 12pt;
             -webkit-transform: translateZ(100px);
             transform: translateZ(100px);
             z-index: 12000;
-            display: block;
+            display: flex;
         }
         .card h2 {
             vertical-align: text-top;
             -webkit-transform: translateZ(75px);
             transform: translateZ(75px);
-            display: block;
+            display: flex;
 
         }
         .card h3 {
             -webkit-transform: translateZ(50px);
             transform: translateZ(50px);
-            display: block;
+            font-size: 10pt;
+            display: flex;
 
         }
         .card p {
             -webkit-transform: translateZ(20px);
             transform: translateZ(20px);
-            display: block;
+            display: flex;
         }
 
         .card a {

@@ -131,30 +131,33 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  ICONS  ...... 3D VR WebSpace                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-<span id='menuSpan' style="position:fixed; top:25px; right:25px; z-index:9999999999999999;">
-    <a href="https://MetaMedia.Me"><i class="fas fa-home fa-3x"></i></a>
-    <a href="#" onclick="menuHelper()"><i id='fsIcon' class="fas fa-expand-arrows-alt fa-3x"></i></a>
+<span id='menuSpan' style="position:fixed; bottom:25px; right:25px; z-index:9999999999999999;">
+    <a href="https://MetaMedia.Me"><i class="fas fa-home"></i></a>
+    <a href="#" onclick="menuHelper()"><i id='fsIcon' class="fas fa-expand-arrows-alt"></i></a><div class="cardcredits">
+<h1><a href="#">UI Architect: Ryan Walsh</a></h1>
+<h1><a href="#">UX Designer: Jack Walsh</a></h1>
+</div>
 </span>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-<span id="cardspan">
+<span id="cardspan" style="align: center;">
     <div id='thisCard' class="card">
     <div id="cardContent" class="card-content">
-        <h1>M e t a M e d i a  :  2 0 2 0</h1>
+        <h1>M e t a M e d i a  :  2 0 2 0</h1><br />
         <h3>An Interactive Portfolio Of Commercial Development</h3>
-        <h1><a href="#">UI Architect: Ryan Walsh</a></h1>
-        <h1><a href="#">UX Designer: Jack Walsh</a></h1>
         <h3>(c)2019 All Rights Reserved</h3>
+
+
     </div>
 </div>
 </span>
 
-<!-- --------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 2 ...... Footer Menu                            -->
 <!-- --------------------------------------------------------------------------------------- -->
 
-<div id="footer" class="footer">
+<div id="footer" class="footer" style="visibility: hidden;">
     <div class="footer-content">
         <a id="entButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
         <a href="#"><h2>Small Business</h2></a>
@@ -173,8 +176,8 @@
     var card = $(".card");
     //var container2 = $(".footer");
     $(document).on("mousemove", function (e) {
-        var ax = -($(window).innerWidth() / 2 - e.pageX) / 25;
-        var ay = ($(window).innerHeight() / 2 - e.pageY) / 25;
+        var ax = -($(window).innerWidth() / 2 - e.pageX) / 200;
+        var ay = ($(window).innerHeight() / 2 - e.pageY) / 200;
         card.attr("style", "transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-webkit-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-moz-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg)");
         //    container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
     });
