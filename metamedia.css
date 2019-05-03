@@ -75,7 +75,7 @@
             z-index: 9999999999999;
         }
 
-        .card .card-content .cardcredits {
+        ..cardcredits {
 
 
             text-align: center;
