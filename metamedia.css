@@ -7,6 +7,7 @@
             overflow: hidden;
             font-weight: bold;
             color: white;
+            margin-left: 0;
             font-family: 'Philosopher', sans-serif;
             vertical-align: middle;
             -webkit-transform-style: preserve-3d;
