@@ -121,8 +121,7 @@ p {
 	color: #ffffff;
 	pointer-events: auto;
 	background-color: rgba(53, 96, 148, 0.8);
-	padding: 5px 15px;
-	margin: 10px 10px 10px 10px;
+
 	text-decoration: none;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
