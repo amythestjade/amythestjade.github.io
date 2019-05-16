@@ -69,7 +69,6 @@
             transform-style: preserve-3d;
             backface-visibility: hidden;
             display: flex;
-            flex-direction: row;
             top: 10px;
             left: 25px;
             position: absolute;
