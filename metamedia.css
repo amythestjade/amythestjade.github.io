@@ -71,7 +71,7 @@ p {
 	transition-duration: 0.2s;
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
-	display: flex;
+
 	top: 10px;
 	left: 25px;
 	position: absolute;
