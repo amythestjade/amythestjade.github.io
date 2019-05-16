@@ -67,7 +67,8 @@ function shifty() {
     $(chariCard).hide();
     $(topButton).show();
 
-};
+}
+
 $(mainButton).click(function () {
 });
 $(showButton).click(function () {
@@ -78,7 +79,7 @@ $(showButton).click(function () {
     $(resetButton).hide();
     $(searches).hide();
     $(boxHider).hide();
-})
+});
 $(searchButton2).click(function () {
     $('#searchButton2').fadeOut();
     $(searchButton).fadeIn();
@@ -109,7 +110,8 @@ $(searchButton).click(function () {
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-};
+}
+
 window.addEventListener('resize', resizeCanvas, false);
 //end resize canvas
 
@@ -123,7 +125,7 @@ $("#shim").keyup(function (event) {
 
 //Fire cascade when ready, Lieutennt!
 $(document).ready(function () {
-   // $('#bigCanvas').hide();
+    // $('#bigCanvas').hide();
     $('#bigcanvasContainer').hide();
 
     $('.loading').fadeOut(2500);
@@ -159,11 +161,10 @@ function clicker() {
     //thisCard1.hide();
 
 
-
     $('#cardspan').hide();
     $('#bigcanvasContainer').show();
 
-  //  $('#bigCanvas').show();
+    //  $('#bigCanvas').show();
 }
 
 function Aclicker() {
@@ -243,7 +244,7 @@ if ("ontouchstart" in document.documentElement) {
         pinchZoom: true,
         imageVAlign: "top",
         centreImage: bg21
-    }
+    };
     tagOpt = mouseOpt;
     console.log(location.hash);
 }
@@ -326,7 +327,6 @@ function clickSearch(query) {
             if (val.thumbnail != null) {
                 imagery = val.thumbnail;
             }
-            ;
         });
     });
 
@@ -358,7 +358,7 @@ function clickSearch(query) {
         })
 
 
-};
+}
 
 function hider() {
     $(searches).fadeOut();
@@ -394,7 +394,6 @@ function getTopChars(value) {
     if (!pickShow) {
         return false
     }
-    ;
     //tagOpt.centreImage = bg21;
     $(searchButton2).show();
     $(shim).show();
@@ -416,7 +415,6 @@ function getTopChars(value) {
                 linkTag.push('<li ><a href="#' + pickShow + '" onclick="getSave(' + val.id + ',' + key + ')"><img id="' + val.id + '" width="125px" height="100px" src="' + val.thumbnail + '" />' + val.title + '</a></li>');
 
             }
-            ;
         });
         if (pickShow == "marvelcinematicuniverse") {
             linkTag.push('<li><a href="http://eece8zod4au4lkfnt9vhen8rdl.hop.clickbank.net/" target="_blank">Custom Mk IV Armor<img id="inhouseAdvert"  width="175px" height="140px" src="./img/prod/mkiv.jpg" /></a></li></ul>');
@@ -436,8 +434,7 @@ function getTopChars(value) {
         tagRender(tagOpt);
     });
 
-}; //it works!! it effing works!!!!
-
+} //it works!! it effing works!!!!
 //
 //----------------------------------------------------
 
@@ -468,7 +465,7 @@ function getCard(value, key) {
     paragraph.push('<a href="' + valthumb + '" class="fresco" data-fresco-group="shared_options"><img width="25%" src="' + valthumb + '" style="margin-right: 2%;"/></a>');
     $.getJSON(char, function (data1) {
         $.each(data1.sections, function (key, val) {
-            paragraph.push('<div align="left" style="margin:5px;padding:1 0 1 1;background-color:#040;border-color:#f00;border:4;border-radius:15px;"><p><h2>' + val.title + '</h2></p></div>');
+            paragraph.push('<div align="left" style="margin:5px;padding:1px 0 1px 1px;background-color:#040;border-color:#f00;border:4px;border-radius:15px;"><p><h2>' + val.title + '</h2></p></div>');
             $.each(val.images, function (key1, val1) {
 
                 var url = val1.src;
@@ -489,13 +486,13 @@ function getCard(value, key) {
                         }
                         var val36 = val35.text.toString();
                         // console.log(val35);
-                        paragraph.push('<p style="font-size:36;">' + val35.text + '</p>');
+                        paragraph.push('<p style="font-size:36px;">' + val35.text + '</p>');
                         console.log(val35.text);
                     });
                 }
             });
         });
-        paragraph.push('<hr /><br><p style="font-size:32px";>Is this datacard lacking? All information may be edited by the public at <a style="color:blue" href="http://wikia.com" target="_blank">wikia</a>. Wiki info is shared under CC-SA. </p>')
+        paragraph.push('<hr /><br><p style="font-size:32px";>Is this datacard lacking? All information may be edited by the public at <a style="color:blue" href="http://wikia.com" target="_blank">wikia</a>. Wiki info is shared under CC-SA. </p>');
         // console.log(paragraph);
         $(chariCard).html(paragraph);
     });
@@ -508,8 +505,7 @@ function getCard(value, key) {
     $(chariCard).show();
 
 
-}; //it works!! it effing works!!!!
-
+} //it works!! it effing works!!!!
 //
 //----------------------------------------------------
 
@@ -545,7 +541,6 @@ function getSave(value, key) {
             } else {
                 valthumb = valS.thumbnail;
             }
-            ;
             if (!valthumb) {
                 valthumb = './img/' + pickShow + '.png';
             }
@@ -568,7 +563,7 @@ function getSave(value, key) {
             $(searches).fadeIn();
             $(searches).html("<div id='searchCheck'>There was an error. sry :(<br /><br /><a href='#" + pickShow + "' onCLick='hider()'>Click Here To Return to #" + pickShow + "</a>");
         })
-};
+}
 
 function getSave2() {
     $("#topButton").html(' #' + pickShow + ' ');
@@ -588,14 +583,13 @@ function getSave2() {
 
     $(shimBtm).html(paragraph);
 
-    valthumb = './img/ryan61.jpg'
-    paragraph = '<img id="saveDetail" src="' + valthumb + '" /><p id="shortText" align="center"><i>We are for sale!</i><br />We are the brothers Jack & Ryan Walsh. Last month we decided to write a piece of software that could digest any supermassive data source and provide the resulting thinthread to users. We are using wikia as our demo data source, but :A|B: can take any information in any format or schema and display relationships, interaction analysis and investigations info as demonstrated here! Though she was designed as a mighty tool for "Find, Fix, & Finish" missions, we decided early on that :A|B: will *never* track or trace human universes. She cannot, shall not, and will not. ever. period.'
+    valthumb = './img/ryan61.jpg';
+    paragraph = '<img id="saveDetail" src="' + valthumb + '" /><p id="shortText" align="center"><i>We are for sale!</i><br />We are the brothers Jack & Ryan Walsh. Last month we decided to write a piece of software that could digest any supermassive data source and provide the resulting thinthread to users. We are using wikia as our demo data source, but :A|B: can take any information in any format or schema and display relationships, interaction analysis and investigations info as demonstrated here! Though she was designed as a mighty tool for "Find, Fix, & Finish" missions, we decided early on that :A|B: will *never* track or trace human universes. She cannot, shall not, and will not. ever. period.';
     mainButton.value = valS.title;
     $(shimBtm).html(paragraph);
     //console.log(paragraph);
     $(shimBtm).fadeIn();
-};
-
+}
 
 function tagRender(o) {
     var s = (new Date).getTime() / 360;
@@ -693,9 +687,8 @@ function getRel(value, a) {
             }
 
 
-        }); 
-};
-
+        });
+}
 
 (function ($) {
     var last_hash = location.hash,
@@ -732,11 +725,11 @@ function getRel(value, a) {
             last_hash = hash;
         }
         timeout_id = setTimeout(start, 100);
-    };
+    }
 
     function stop() {
         clearTimeout(timeout_id);
-    };
+    }
 })(jQuery);
 
 $(function () {
