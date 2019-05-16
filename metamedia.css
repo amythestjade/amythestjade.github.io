@@ -79,12 +79,9 @@ p {
 }
 
 .card-content {
-
-
 	text-align: center;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	display: flex;
 
 }
 
