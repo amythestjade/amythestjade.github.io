@@ -53,7 +53,7 @@ a:hover {
 	color: rgba(53, 96, 148, 1);
 	background-color: rgba(100, 100, 200, 0.5);
 	border-radius: 15px 15px 15px 15px;
-	border: solid 1px rgba(53, 96, 148, 0.5);
+	border: solid 1px rgba(255, 0, 0, 1);
 	transition-duration: 0.2s;
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
@@ -66,10 +66,10 @@ a:hover {
 }
 
 .card-content {
-	text-align: center;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	padding: 5px;
+	border: solid 1px rgba(0, 0, 255, 1);
 
 }
 
