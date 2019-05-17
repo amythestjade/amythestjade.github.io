@@ -130,7 +130,7 @@ $(document).ready(function () {
 
     $('.loading').fadeOut(500);
 
-    $('#curtain2').fadeOut(4000);
+    $('#curtain1').fadeOut(4000);
     $('#curtain2').fadeOut(3500);
 
 
