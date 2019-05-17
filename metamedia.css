@@ -51,7 +51,7 @@ a:hover {
 }
 .card {
 	z-index: 9999999999999;
-
+display : flex;
 	color: rgba(53, 96, 148, 1);
 	background-color: rgba(100, 100, 200, 0.5);
 	border-radius: 15px 15px 15px 15px;
