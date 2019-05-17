@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
     <!-- --------------------------------------------------------------------------------------- -->
     <!--                                                               local temp script helpers -->
     <script>var sunbox = "./3.png";</script>
@@ -39,9 +38,7 @@
 
             toggleFullScreen(document.body);
             $('#fsIcon').toggleClass('fa-expand-arrows-alt fa-compress-arrows-alt');
-
         }
-
         function toggleFullScreen(elem) {
             // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
             if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -316,7 +313,6 @@
 
     function render() {
         var time = performance.now() * 0.001;
-
         water.material.uniforms.time.value += 1.0 / 60.0;
         controls.update();
         water.render();

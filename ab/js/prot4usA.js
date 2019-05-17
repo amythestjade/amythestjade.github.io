@@ -128,9 +128,11 @@ $(document).ready(function () {
     // $('#bigCanvas').hide();
     $('#bigcanvasContainer').hide();
 
-    $('.loading').fadeOut(2500);
+    $('.loading').fadeOut(500);
 
+    $('#curtain2').fadeOut(4000);
     $('#curtain2').fadeOut(3500);
+
 
     //$(window).hashchange();
     getSearch();
