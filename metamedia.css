@@ -1,40 +1,13 @@
-
 body {
-	background-color: rgba(0, 0, 55, .5);
-	background-size: 3px, 13px, 17px, 5px;
-	padding: 0;
-	margin: 0;
+	background-color: rgba(0, 0, 5, 1);
 	overflow: hidden;
 	font-weight: bold;
 	color: white;
-	margin-left: 0;
 	font-family: 'Philosopher', sans-serif;
-	vertical-align: middle;
-	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 100vh;
 	width: 100vw;
-}
-
-a,
-a:visited,
-a:active,
-a:hover {
-	color: #fff;
-	text-decoration: underline;
-}
-p {
-	display: inline;
-}
-.hiddenstuff {
-	z-index: -9999999999999999;
-	position: absolute;
-	left: -9999999999999px;
-	bottom: -9999999999999999px;
-	display: none;
 }
 
 .curtain {
@@ -54,24 +27,17 @@ p {
 .card {
 	color: rgba(53, 96, 148, 1);
 	background-color: rgba(100, 100, 200, 0.4);
-	padding: 10px 10px 10px 10px;
-	margin: 10px 10px 10px 10px;
 	border-radius: 15px 15px 15px 15px;
 	border: solid 1px rgba(53, 96, 148, 0);
-	width: 500px;
-	height: 300px;
-	-webkit-transition-duration: 0.2s;
-	-moz-transition-duration: 0.2s;
 	transition-duration: 0.2s;
-	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	top: 5%;left:5%;
 	position: absolute;
+	align-items: center;
+	justify-content: center;
+
 }
 
 .card:after {
@@ -81,8 +47,8 @@ p {
 	height: 10px;
 	border-radius: 50%;
 	left: 0;
-	bottom: -50px;
-	box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+	bottom: -35px;
+	box-shadow: 0 30px 20px rgba(0, 0, 0, 0.83);
 }
 
 .card .card-content {
@@ -92,167 +58,96 @@ p {
 	transform-style: preserve-3d;
 }
 
-.card h1 {
-	-webkit-transform: translateZ(100px);
-	transform: translateZ(100px);
+.card-content h1 {
+	color: rgba(255, 0, 0, .85);
+	transform: translateZ(80px);
+	font-size: 24pt;
+	padding: 0 20px;
 }
 
-.card h2 {
-	-webkit-transform: translateZ(75px);
-	transform: translateZ(75px);
+.card-content h2 {
+	color: rgba(255, 255, 255, .85);
+	transform: translateZ(60px);
+	font-size: 14pt;
 }
 
-.card p {
-	-webkit-transform: translateZ(50px);
+.card-content h3{
+	color: rgba(255, 255, 255, .85);
+	transform: translateZ(80px);
+	font-size: 16pt;
+}
+
+.card-content p {
 	transform: translateZ(50px);
-	display: block;
+	font-size: 12pt;
+	font-style: italic;
 }
 
-.card p.related {
-	-webkit-transform: translateZ(80px);
+.card-content p.related {
 	transform: translateZ(80px);
 	font-style: italic;
 }
 
-.card a {
-	transform: translateZ(80px);
-	color: #69c6b8;
-	pointer-events: auto;
-	padding: 10px 15px;
-	background: #4479BA;
-	color: #FFF;
-	border-radius: 4px;
-	border: solid 1px #20538D;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	transition-duration: 0.2s;
-}
-
-.card a:hover {
-	background: #356094;
-	border: solid 1px #2A4E77;
+.card-content a {
+	color: rgba(255, 255, 255, .85);
+	background-color: rgba(53, 96, 148, 0.8);
+	padding: 5px 15px;
+	margin: 10px 10px 10px 10px;
 	text-decoration: none;
+	border-radius: 4px;
+	transform: translateZ(180px);
 }
 
-.card a:active {
-	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-	background: #2E5481;
+.card-content a:hover {
+	color: rgba(255, 255, 255, .85);
+	background-color: rgba(53, 96, 148, 0.8);
+	transform: translateZ(220px);
+	text-decoration: underline;
+}
+
+.card-content a:active {
+	color: rgba(255, 255, 255, .85);
+	background-color: rgba(53, 96, 148, 0.8);
 	border: solid 1px #203E5F;
 }
 
-.card a {
-	-webkit-transform: translateZ(80px);
-	transform: translateZ(80px);
-	color: #69c6b8;
-	pointer-events: auto;
-	padding: 10px 15px;
-	background: #4479BA;
-	color: #FFF;
-	border-radius: 4px;
-	border: solid 1px #20538D;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	transition-duration: 0.2s;
-	z-index: 9999999999999999999999999999999999999999;
-}
-
-.card a:hover {
-	background: #356094;
-	border: solid 1px #2A4E77;
-	text-decoration: none;
-}
-
-.card a:active {
-	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-	background: #2E5481;
-	border: solid 1px #203E5F;
-}
-
-.blur {
-	padding-bottom: 10px;
-	text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
-	color: rgba(0, 0, 100, 0.5);
-	font-size: 5em;
-	text-align: center;
-}
-
-.container {
-	align: center;
-	text-align: center;
-	background-color: rgba(255, 255, 255, .7);
-	-webkit-transform: translateZ(30);
-	transform: translateZ(30);
-	border-radius: 25px 25px 25px 25px;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-bottom: 20px;
-	height: 100px;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	position: absolute;
-	top: 10%;
-	left: 66%;
-}
 .footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	position: fixed;
-
 	bottom: 25px;
-
 	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 99999999999999999999999999999999999999999999;
-
 	width: 100%;
 	padding: 5px;
-
 	text-align: center;
-
 }
 
 .footer-content {
-
 	justify-content: space-between;
 	width: 90%;
 	text-align: center;
 	text-decoration: none;
-
 	display: flex;
 }
-
 
 .footer-content a {
 	display: flex;
 	justify-content: space-around;
 	text-decoration: none;
-
 	color: #fff;
-
-
 	padding-right: 10px;
 	padding-left: 10px;
-
 	background: rgba(53, 96, 148, 0);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-
 }
 
 .footer-content a:hover {
 	background: #356094;
-
 	text-decoration: underline;
-
 }
 
 .footer-content a:active {
@@ -267,25 +162,16 @@ p {
 	display: flex;
 	justify-content: space-around;
 	text-decoration: none;
-
 	color: #fff;
-
-
 	padding-right: 10px;
 	padding-left: 10px;
-
 	background: rgba(53, 96, 148, 0);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
-
 }
 
 .footer-content button:hover {
 	background: #356094;
-
 	text-decoration: underline;
-
 }
 
 .footer-content button:active {

@@ -128,31 +128,18 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <span id='menuSpan' style="position:fixed; top:25px; right:25px; z-index:9999999999999999;">
     <a href="https://MetaMedia.Me"><i class="fas fa-home"></i></a>
-    <a href="#" onclick="menuHelper()"><i id='fsIcon' class="fas fa-expand-arrows-alt"></i></a><div class="cardcredits">
-
-</div>
+    <a href="#" onclick="menuHelper()"><i id='fsIcon' class="fas fa-expand-arrows-alt"></i></a>
 </span>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-    <span class="card">
-    <div class="card-content">
-
-    </div>
-</span>
-
-<!--rpwalsh.tk entry portal banner-->
-<div class="container">
-    <div class="blur">rpwalsh.tk</div>
-</div>
-
 <!--rpwalsh.tk entry portal CardUI DOM -->
 <div class="card">
-    <div class=" card-content">
+    <div class="card-content">
         <h1>M e t a M e d i a  :  2 0 2 0</h1>
-        <h2>A Commercial Portfolio</h2><br />
-        <a href="#">UI: Ryan Walsh</a> <a href="#">UX: Jack Walsh</a><br />
-        <h3>(c)2019 All Rights Reserved</h3>
+        <h2>A Commercial Portfolio</h2>
+        <h3><a href="#">UI: Ryan Walsh</a> <a href="#">UX: Jack Walsh</a></h3>
+        <p>(c)2019 All Rights Reserved</p>
     </div>
 
 </div>
@@ -165,10 +152,9 @@
     <div class="footer-content">
         <a id="entButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
         <a href="#"><h2>Small Business</h2></a>
-        <a href="#"><h2>Mobile Apps</h2></a>
         <a href="#"><h2>Marketing</h2></a>
-        <a href="#"><h2>Code Browser</h2></a>
-        <!--    <a href="https://play.google.com/store/apps/developer?id=Castlehale+Group+Ltd" target="_blank">App</a> -->
+        <a href="https://play.google.com/store/apps/developer?id=Castlehale+Group+Ltd" target="_blank"><h2>Mobile</h2></a>
+        <a href="https://github.com/amythestjade/amythestjade.github.io" target="_blank"><h2>Code</h2></a>
     </div>
 </div>
 
@@ -177,14 +163,23 @@
 <!-- --------------------------------------------------------------------------------------- -->
 
 <script>
+    // set mouse control
     var card = $(".card");
-    //var container2 = $(".footer");
-    $(document).on("mousemove", function (e) {
-        var ax = -($(window).innerWidth() / 2 - e.pageX) / 200;
-        var ay = ($(window).innerHeight() / 2 - e.pageY) / 200;
+    $(document).on("mousemove", function(e) {
+        var ax = -($(window).innerWidth() / 2 - e.pageX) / 20;
+        var ay = ($(window).innerHeight() / 2 - e.pageY) / 10;
         card.attr("style", "transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-webkit-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-moz-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg)");
-        //    container2.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
     });
+    // set touch control
+    window.addEventListener("touchstart", touchHandler, false);
+
+    function touchHandler(e) {
+        var ax = -($(window).innerWidth() / 2 - e.pageX) / 20;
+        var ay = ($(window).innerHeight() / 2 - e.pageY) / 10;
+        card.attr("style", "transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-webkit-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg);-moz-transform: rotateY(" + ax + "deg) rotateX(" + ay + "deg)");
+    };
+
+    // check if chrome, show debug controls for IE/Firefox   [ should be check for webkit, not chrome -- to fix  --r ]
 </script>
 
 <!-- --------------------------------------------------------------------------------------- -->
