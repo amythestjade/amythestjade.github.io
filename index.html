@@ -34,6 +34,21 @@
     <!--                                                               local temp script helpers -->
     <script>var sunbox = "./3.png";</script>
     <script>
+        var toggleVisibility = function(element) {
+            if (element.id == 'ryan1'){
+                var tempvar1 = document.getElementById('jack1');
+                tempvar1.style.display='none';
+            }
+            if (element.id == 'jack1'){
+                var tempvar1 = document.getElementById('ryan1');
+                tempvar1.style.display='none';
+            }
+            if(element.style.display=='block'){
+                element.style.display='none';
+            } else {
+                element.style.display='block';
+            }
+        };
         function menuHelper() {
 
             toggleFullScreen(document.body);
@@ -68,8 +83,6 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                                                        Background interstitial Z curtain-->
 <div id="curtain1" class="curtain"></div>
-
-
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                                                                            Main Curtain -->
 <div id="curtain2" class="curtain2">
@@ -102,18 +115,15 @@
 <!--                   Scene 1 ......  Entertainment ...... AJAX Visualizer                   -->
 <!-- --------------------------------------------------------------------------------------- -->
 
-<div id="bigcanvasContainer" style="display:none;">
+<div id="bigcanvasContainer">
     <button id='topButton' value="r" onClick="Aclicker()"></button>
     <button id="hideButton" value="y" onClick="shifty()">X</button>
     <input type="button" id='mainButton' value=""/>
     <span id='resetButton' value="p" onClick="Bclicker()" style="visibility:hidden;"></span>
-
-
-    <canvas id="bigCanvas"></canvas>
+    <canvas id="bigCanvas""></canvas>
     <div id="showtags"></div>
     <div id="chariCard" class="card-container"></div>
     <div id="shimBtm"></div>
-
     <input type="search" id='shim' placeholder="#search"/>
     <input type='submit' value="?" id='searchButton'/>
     <input type='submit' value="?" id='searchButton2'/>
@@ -122,14 +132,41 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <!-- End Scene 1 -->
 <!-- --------------------------------------------------------------------------------------- -->
-
 <!-- --------------------------------------------------------------------------------------- -->
-<!--                   Scene 0 ......  ICONS  ...... 3D VR WebSpace                          -->
+<!--                   Scene 0 ......  Navi Menu  ...... 3D VR WebSpace                          -->
 <!-- --------------------------------------------------------------------------------------- -->
-<span id='menuSpan' style="position:fixed; top:25px; right:25px; z-index:9999999999999999;">
-    <a href="https://MetaMedia.Me"><i class="fas fa-home"></i></a>
-    <a href="#" onclick="menuHelper()"><i id='fsIcon' class="fas fa-expand-arrows-alt"></i></a>
-</span>
+<nav class="menu" style="display:none;">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+    <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+    </label>
+    <a href="https://MetaMedia.Me"  class="menu-item"><i class="fa fa-home"></i></a>
+    <a href="#"  class="menu-item" onclick="menuHelper()"><i class="fa fa-expand-arrows-alt"></i></a>
+    <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+    <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+    <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+</nav>
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="shadowed-goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+            <feBlend in2="shadow" in="goo" result="goo" />
+            <feBlend in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+    </defs>
+</svg>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 1 ...... Business Card                          -->
 <!-- --------------------------------------------------------------------------------------- -->
@@ -137,17 +174,33 @@
 <div class="card">
     <div class="card-content">
         <h1>M e t a M e d i a  :  2 0 2 0</h1>
-        <h2>A Commercial Portfolio</h2>
-        <h3><a href="#">UI: Ryan Walsh</a> <a href="#">UX: Jack Walsh</a></h3>
+        <h2>User Interaction Demo</h2>
+        <h3><a href="#" onclick="toggleVisibility(document.getElementById('ryan1'))" id="ryan2">UI: Ryan Walsh</a> <a href="#" onclick="toggleVisibility(document.getElementById('jack1'))" id="jack2">UX: Jack Walsh</a></h3>
         <p>(c)2019 All Rights Reserved</p>
     </div>
-
 </div>
 <!--that's all folks! Do not add anything DOM related below this line -->
+<div id="jack1" class='jack' style="display:none;">
+    <h1>
+        Jack Walsh
+    </h1>
+    <img src='http://static.wix.com/media/9173d6_b6e7d7a2d6e92e1a1da9aefda77fa7d7.jpg_256'>
+    <p class='bio'>
+        Luke Skywalker was the son of Anakin Skywalker and Padmé Amidala, and the older twin brother of Leia Organa Solo. He was a Jedi Master and hero of the Galactic Civil War. A celebrated pilot and leader, Skywalker was most famous for destroying the first Death Star and prompting Darth Vader to kill Emperor Palpatine, which led to the eventual downfall of the Galactic Empire.
+    </p>
+</div>
+<div id="ryan1" class='jack' style="display:none;">
+    <h1>
+        Ryan Walsh
+    </h1>
+    <img src='http://static.wix.com/media/9173d6_b6e7d7a2d6e92e1a1da9aefda77fa7d7.jpg_256'>
+    <p class='bio'>
+        Luke Skywalker was the son of Anakin Skywalker and Padmé Amidala, and the older twin brother of Leia Organa Solo. He was a Jedi Master and hero of the Galactic Civil War. A celebrated pilot and leader, Skywalker was most famous for destroying the first Death Star and prompting Darth Vader to kill Emperor Palpatine, which led to the eventual downfall of the Galactic Empire.
+    </p>
+</div>
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Asset 2 ...... Footer Menu                            -->
 <!-- --------------------------------------------------------------------------------------- -->
-
 <div id="footer" class="footer">
     <div class="footer-content">
         <a id="entButton" href='#' onClick="clicker()"><h2>Entertainment</h2></a>
@@ -185,10 +238,7 @@
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Helper 2 ...... WebGL Helper Scripts                   -->
 <!-- --------------------------------------------------------------------------------------- -->
-
-
 <script>
-
     var container, stats;
     var camera, scene, renderer;
     var sphere;
@@ -310,38 +360,28 @@
             shininess: 100,
             envMap: cubeMap
         });
-
     }
-
     //
     function animate() {
         requestAnimationFrame(animate);
         render();
 
     }
-
     function render() {
         var time = performance.now() * 0.001;
         water.material.uniforms.time.value += 1.0 / 60.0;
         controls.update();
         water.render();
         renderer.render(scene, camera);
-
     }
 </script>
-
 <!-- --------------------------------------------------------------------------------------- -->
 <!--                   Scene 0 ......  Helper 3 ...... Cleanup Scripts                       -->
 <!-- --------------------------------------------------------------------------------------- -->
-
-
 <script src="./ab/js/prot4usA.js"></script>
 <!-- --------------------------------------------------------------------------------------- -->
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX END PAGE -->
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX END PAGE -->
 <!-- --------------------------------------------------------------------------------------- -->
-
-
 </body>
-
 </html>

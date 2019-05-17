@@ -1,17 +1,4 @@
-	body {
-			overflow: hidden;
-			-webkit-transform-style: preserve-3d;
-			transform-style: preserve-3d;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			height: 100vh;
-			width: 100vw;
-			font-family: "Playfair Display", georgia, serif;
-		}
-
 #bigCanvas {
-  
   width: 100%;
   color: #ffffff;
   background-color:rgba(0, 0, 0, 0.000);
@@ -19,14 +6,15 @@
 
 #bigcanvasContainer {
   position: absolute;
-  top: 0px;  left:0;
+  top: 0;  left:0;
   width: 100%;
     background-repeat: no-repeat;
   padding: 0px;
   text-align:center;
-  z-index: 5000;
+  z-index: 9999999999999999999999999999999999999999999999999;
   overflow: hidden;
   color: white;
+
 }
 
 #showButton {  
@@ -462,7 +450,7 @@ position: relative;
 top:10;  font-family: Open Sans;
 
 left:10;
-     z-index: 1702;
+     z-index: 9999999999999999999999999999999999999999999999999999999999999999999999;
 
 }
 .title

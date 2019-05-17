@@ -150,20 +150,8 @@ function Dclicker() {
 
 function clicker() {
 
-    //thisCard1.fadeOut();
-
-    $('#curtain1').fadeIn(600);
-    //$('#curtain1').style('z-index','0');
-    //var tc = 'card';
-    //var hdn = 'hiddenstuff';
-    //var ccc = 'card-content'
-    //thisCard1.toggleClass(tc, hdn);
-    //thisCard2.toggleClass(ccc, hdn);
-
-    //thisCard1.hide();
-
-
-    $('#cardspan').hide();
+    var thistrian = document.getElementById('curtain1');
+    thistrian.style.display = 'block';
     $('#bigcanvasContainer').show();
 
     //  $('#bigCanvas').show();
