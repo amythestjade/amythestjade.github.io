@@ -150,10 +150,11 @@ function Dclicker() {
 
 function clicker() {
 
-    var thistrian = document.getElementById('curtain1');
-    thistrian.style.display = 'block';
-    $('#bigcanvasContainer').show();
-
+   // var thistrian = document.getElementById('curtain1');
+    $('.card').toggle();
+    $('#curtain1').toggle();
+    $('#bigcanvasContainer').toggle();
+   // $('.footer').toggle();
     //  $('#bigCanvas').show();
 }
 
