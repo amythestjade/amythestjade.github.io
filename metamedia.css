@@ -521,7 +521,7 @@ input[type="submit"] {
 
 .jack {
 width: 50%;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(200, 200, 200, 0.6);
 	padding: 15px;
 	color: #000;
 	overflow: hidden;
@@ -532,6 +532,7 @@ width: 50%;
 	top: 5px;
 	bottom: 5px;
 	box-shadow: 5px 5px 0 0 #aaa;
+	border-radius: 15px;
 }
 .jack h1 {
 	margin: 0;
@@ -540,7 +541,8 @@ width: 50%;
 	font-weight: 400;
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
-	animation: fadein 1.2s;
+	animation: fadein 1.2s;	border-radius: 15px;
+
 }
 .jack img {
 	width: 200px;
@@ -549,6 +551,10 @@ width: 50%;
 	position: relative;
 	z-index: 1;
 	animation: grow 1.6s;
+}
+.jack a {
+	color: #0000ff;
+
 }
 .jack .bio {
 	position: relative;
