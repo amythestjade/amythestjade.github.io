@@ -42,17 +42,17 @@ var valthumb;
 
 //init window
 $(searchButton2).hide();
-$(resetButton).show();
+$(resetButton).hide();
 
 $(chariCard).hide();
 $(mainButton).hide();
-$('#hideButton').hide();
+//$('#hideButton').hide();
 $(shimBtm).hide();
 $(searches).hide();
 $('#showButton').hide();
-$(searchButton).hide();
-$(shim).show();
-$(topButton).hide();
+//$(searchButton).hide();
+$(shim).hide();
+//$(topButton).hide();
 $(boxHider).hide();
 //////////////
 //buttons
