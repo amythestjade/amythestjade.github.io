@@ -47,15 +47,7 @@ apiKey=849f187b695d4b2ca400a848c8861b41
 <input type="search" id='shim' placeholder="#search"/>
 <input type='submit' value="?" id='searchButton'/><hr />
 <div id="searchTerm"></div><hr />
-<div class="wrapper" id="testBox">
-<div class="media">
-    <div class="layer">
-
-    </div>
-
-</div>
-
-</div>
+<div class="wrapper" id="testBox"></div>
 
 <script>
     var query = "trump";
@@ -87,7 +79,7 @@ apiKey=849f187b695d4b2ca400a848c8861b41
 
     var article = [];
     var showtags      = document.getElementById('testBox');
-        var searchTerms      = document.getElementById('searchTerm');
+
 
 
     //  var source, author, title, description, url, urlToImage, publishedAt, content;
@@ -101,8 +93,11 @@ apiKey=849f187b695d4b2ca400a848c8861b41
             var articleImage = val.urlToImage;
             var articleTime = val.publishedAt;
             var articleContent = val.content;
-            article.push('<li><a href="#" onclick="getSave(' + val.url + ',' + key + ')"><img width="125px" height="125px" src="' + val.urlToImage + '" />' + val.title + '</a></li>');
-            $(showtags).append('<div class="media"><div class="layer"><a href="' + val.url + '">' + val.title + '</a><p>'+val.content+'</p></div><img src="'+val.urlToImage+'" alt="'+val.publishedAt+'" /></div>');
+            if (val.urlToImage !== null){
+                $(showtags).append('<div class="media"><span class="spantitle">'+val.title+'<a href="' + val.url + '">  link. </a></span><div class="layer"><p>'+val.content+'</p></div><img src="'+val.urlToImage+'" alt="'+val.publishedAt+'" /></div>');
+                article.push('<li><a href="#" onclick="getSave(' + val.url + ',' + key + ')"><img width="125px" height="125px" src="' + val.urlToImage + '" />' + val.title + '</a></li>');
+
+            }
 
 
         });
